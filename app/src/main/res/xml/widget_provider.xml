@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/widget_layout"
+    android:minWidth="400dp"
+    android:minHeight="400dp"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="0"
+    android:configure="com.example.inwon.clockwidget.WidgetConfig"/>
+    <!--android:minHeight="72dp"--> <!--cell : 1-->
+    <!--android:minWidth="146dp"--> <!--cell : 2-->
+    <!--400dp = 5 cell-->
+    <!--
+    size = min 4*4 / max 5*5
+
+    -->
