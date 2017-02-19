@@ -18,6 +18,7 @@ public class WidgetConfig extends AppCompatActivity{
     AppWidgetManager appWidgetManager;
     static String name="";
     static String text="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
