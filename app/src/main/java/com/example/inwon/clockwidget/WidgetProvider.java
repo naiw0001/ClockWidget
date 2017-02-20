@@ -8,9 +8,6 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 
-/**
- * Created by inwon on 2017-02-14.
- */
 
 public class WidgetProvider extends AppWidgetProvider{
 

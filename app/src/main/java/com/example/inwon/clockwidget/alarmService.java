@@ -54,62 +54,62 @@ public class alarmService extends Service{
             if(!name.equals("") && !text.equals("")) {
                 views.setTextViewText(R.id.widgettext, name + "아, " + text);
             }
-            views.setTextColor(R.id.si, Color.BLUE);
-            views.setTextColor(R.id.bun, Color.BLUE);
+            views.setTextColor(R.id.si, Color.WHITE);
+            views.setTextColor(R.id.bun, Color.WHITE);
             // HOUR SET
             int ampm = Integer.parseInt(hour);
 
             if (ampm >= 12) {
-                views.setTextColor(R.id.PM, Color.BLUE);
+                views.setTextColor(R.id.PM, Color.WHITE);
                 views.setTextColor(R.id.AM, Color.GRAY);
             } else {
                 views.setTextColor(R.id.PM, Color.GRAY);
-                views.setTextColor(R.id.AM, Color.BLUE);
+                views.setTextColor(R.id.AM, Color.WHITE);
             }
 
             if (hour.equals("12") && min.equals("00")) {
-                views.setTextColor(R.id.jung, Color.BLUE);
-                views.setTextColor(R.id.oh2, Color.BLUE);
+                views.setTextColor(R.id.jung, Color.WHITE);
+                views.setTextColor(R.id.oh2, Color.WHITE);
                 views.setTextColor(R.id.si, Color.GRAY);
-                views.setTextColor(R.id.bun, Color.BLUE);
+                views.setTextColor(R.id.bun, Color.WHITE);
             } else if (hour.equals("24") && min.equals("00")) {
-                views.setTextColor(R.id.ja, Color.BLUE);
-                views.setTextColor(R.id.oh2, Color.BLUE);
+                views.setTextColor(R.id.ja, Color.WHITE);
+                views.setTextColor(R.id.oh2, Color.WHITE);
                 views.setTextColor(R.id.si, Color.GRAY);
                 views.setTextColor(R.id.bun, Color.GRAY);
             } else {
 
                 for (int j = 0; j < 13; j++) { //0~12
                     int i_tens = Integer.parseInt(hour);
-                    views.setTextColor(R.id.si,Color.BLUE);
+                    views.setTextColor(R.id.si,Color.WHITE);
                     if (i_tens >= 12) i_tens -= 12;
                     if (i_tens == 12 || i_tens == 00) {
                         inithourtext();
-                        views.setTextColor(iiten[15], Color.BLUE);
-                        views.setTextColor(iiten[17], Color.BLUE);
+                        views.setTextColor(iiten[15], Color.WHITE);
+                        views.setTextColor(iiten[17], Color.WHITE);
                         break;
                     }
                     if (i_tens == j) {
                         inithourtext();
                         if (i_tens < 5) {
-                            views.setTextColor(iiten[j], Color.BLUE);
+                            views.setTextColor(iiten[j], Color.WHITE);
                             break;
                         } else if (i_tens >= 5) { //5시
                             if (i_tens == 10) {
-                                views.setTextColor(iiten[15], Color.BLUE);
+                                views.setTextColor(iiten[15], Color.WHITE);
                                 break;
                             } else if (i_tens == 11) {
-                                views.setTextColor(iiten[15], Color.BLUE);
-                                views.setTextColor(iiten[16], Color.BLUE);
+                                views.setTextColor(iiten[15], Color.WHITE);
+                                views.setTextColor(iiten[16], Color.WHITE);
                                 break;
                             } else if (i_tens == 12) {
-                                views.setTextColor(iiten[15], Color.BLUE);
-                                views.setTextColor(iiten[17], Color.BLUE);
+                                views.setTextColor(iiten[15], Color.WHITE);
+                                views.setTextColor(iiten[17], Color.WHITE);
                                 break;
                             } else {
                                 int a = i_tens - 5;
-                                views.setTextColor(iiten[j + a], Color.BLUE);
-                                views.setTextColor(iiten[j + a + 1], Color.BLUE);
+                                views.setTextColor(iiten[j + a], Color.WHITE);
+                                views.setTextColor(iiten[j + a + 1], Color.WHITE);
                                 break;
                             }
                         }
@@ -131,21 +131,21 @@ public class alarmService extends Service{
                 if (imin_ten == 0) {
                     break;
                 } else if (imin_ten == 5) {
-                    views.setTextColor(iimin_tens[4],Color.BLUE);
-                    views.setTextColor(iimin_tens[0],Color.BLUE);
+                    views.setTextColor(iimin_tens[4],Color.WHITE);
+                    views.setTextColor(iimin_tens[0],Color.WHITE);
                     break;
                 } else if (imin_ten == 1) {
-                    views.setTextColor(iimin_tens[0],Color.BLUE);
+                    views.setTextColor(iimin_tens[0],Color.WHITE);
                     break;
                 } else {
-                    views.setTextColor(iimin_tens[0],Color.BLUE);
-                    views.setTextColor(iimin_tens[i-1],Color.BLUE);
+                    views.setTextColor(iimin_tens[0],Color.WHITE);
+                    views.setTextColor(iimin_tens[i-1],Color.WHITE);
                     break;
                 }
             }
         }
         for (int j = 0; j <= 9; j++) {
-            views.setTextColor(R.id.bun,Color.BLUE);
+            views.setTextColor(R.id.bun,Color.WHITE);
             initmin_utext();
             if (imin_unit == j) {
                 if (imin_unit == 0) {
@@ -154,10 +154,10 @@ public class alarmService extends Service{
                     }
                     break;
                 } else if (imin_unit == 9) {
-                    views.setTextColor(iimin_units[8],Color.BLUE);
+                    views.setTextColor(iimin_units[8],Color.WHITE);
                     break;
                 } else {
-                    views.setTextColor(iimin_units[j-1],Color.BLUE);
+                    views.setTextColor(iimin_units[j-1],Color.WHITE);
                     break;
                 }
             }
