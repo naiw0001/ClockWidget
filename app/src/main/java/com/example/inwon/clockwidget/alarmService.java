@@ -78,6 +78,10 @@ public class alarmService extends Service{
                 views.setTextColor(R.id.si, Color.GRAY);
                 views.setTextColor(R.id.bun, Color.GRAY);
             } else {
+                views.setTextColor(R.id.jung, Color.GRAY);
+                views.setTextColor(R.id.oh2, Color.GRAY);
+                views.setTextColor(R.id.si, Color.GRAY);
+                views.setTextColor(R.id.bun, Color.GRAY);
 
                 for (int j = 0; j < 13; j++) { //0~12
                     int i_tens = Integer.parseInt(hour);
@@ -166,6 +170,7 @@ public class alarmService extends Service{
 
 
     private void inithourtext() {
+        views.setTextColor(R.id.si,Color.WHITE);
         for (int i = 0; i < iiten.length; i++) {
             views.setTextColor(iiten[i],Color.GRAY);
         }
@@ -178,6 +183,7 @@ public class alarmService extends Service{
     }
 
     private void initmin_utext() {
+        views.setTextColor(R.id.bun,Color.WHITE);
         for (int i = 0; i < iimin_units.length; i++) {
             views.setTextColor(iimin_units[i],Color.GRAY);
         }
